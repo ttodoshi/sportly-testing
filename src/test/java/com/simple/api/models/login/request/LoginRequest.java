@@ -1,4 +1,4 @@
-package com.simple.api.models.login;
+package com.simple.api.models.login.request;
 
 import lombok.Builder;
 import lombok.Data;

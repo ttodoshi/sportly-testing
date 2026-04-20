@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.restassured.RestAssured;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
@@ -21,10 +20,5 @@ public class Hooks {
     public void tearDownUi() {
         Selenide.screenshot(System.currentTimeMillis() + ".png");
         closeWebDriver();
-    }
-
-    @Before("@api")
-    public void setupApi(){
-        RestAssured.baseURI = "http://localhost:8000";
     }
 }
