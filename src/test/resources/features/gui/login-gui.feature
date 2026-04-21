@@ -3,8 +3,8 @@
   @ui
   Scenario Outline: login_success
     Given Открыта страница "/login"
-    When В поле Email ввести значение "<email>"
-    And В поле Пароль ввести значение "<password>"
+    When В поле Email при логине ввести значение "<email>"
+    And В поле Пароль при логине ввести значение "<password>"
     Then Проверить, что кнопка Войти активна
     And Нажать кнопку Войти
     Then Проверить, что появился алерт с текстом "<result>"
@@ -17,8 +17,8 @@
   @ui
   Scenario Outline: login_invalid_data
     Given Открыта страница "/login"
-    When В поле Email ввести значение "<email>"
-    And В поле Пароль ввести значение "<password>"
+    When В поле Email при логине ввести значение "<email>"
+    And В поле Пароль при логине ввести значение "<password>"
     Then Проверить, что кнопка Войти активна
     And Нажать кнопку Войти
     Then Проверить, что появился алерт с текстом "<result>"

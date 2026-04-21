@@ -1,25 +1,15 @@
-package com.simple.ui.pages.login;
+package com.simple.ui.pages.auth.login;
 
 import com.codeborne.selenide.SelenideElement;
-import com.simple.ui.pages.BasePage;
+import com.simple.ui.pages.auth.AuthPage;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$x;
 import static org.assertj.core.api.Assertions.assertThat;
 
 // page_url = http://localhost:3000/login
-public class LoginPage extends BasePage {
-    private final SelenideElement emailField = $x("//input[@type='email']");
-    private final SelenideElement passwordField = $x("//input[@type='password']");
+public class LoginPage extends AuthPage {
     private final SelenideElement loginButton = $x("//button[@type='submit']");
-
-    public void enterEmail(String email) {
-        emailField.setValue(email);
-    }
-
-    public void enterPassword(String password) {
-        passwordField.setValue(password);
-    }
 
     public void checkLoginButtonIsEnabled() {
         loginButton.shouldBe(enabled);
